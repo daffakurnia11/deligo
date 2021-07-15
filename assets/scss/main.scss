@@ -1,0 +1,331 @@
+$primary-green: #65c083;
+$primary-orange: #f2865d;
+$primary-blue: #23b7a4;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+body {
+	position: relative;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+button {
+	border: transparent;
+}
+
+.v-height-80 {
+	min-height: 90vh;
+}
+
+.button-white {
+	background-color: white;
+	font-size: 1.25rem;
+	color: $primary-green;
+	border-radius: 0.5rem;
+	padding: 0.75rem 1.5rem;
+	transition: ease-in-out 0.3s;
+	&:hover {
+		color: white;
+		background-color: $primary-orange;
+	}
+}
+.button-blue {
+	background-color: $primary-blue;
+	color: white;
+	border-radius: 0.5rem;
+	padding: 0.5rem 1rem;
+	transition: ease-in-out 0.3s;
+	&:hover {
+		color: white;
+		background-color: $primary-orange;
+	}
+}
+
+.form {
+	background-color: white;
+	padding: 1.5rem;
+	label {
+		color: grey;
+		text-transform: uppercase;
+	}
+	.form-control {
+		background-color: rgba(243, 243, 243, 0.308);
+	}
+}
+
+header {
+	.navbar {
+		color: $primary-green;
+		&-brand {
+			color: white;
+			font-size: 1.5rem;
+			font-weight: bolder;
+		}
+		.nav-link {
+			color: inherit;
+			font-size: 1.25rem;
+			margin: auto 1rem;
+			&.active {
+				position: relative;
+				&::after {
+					content: "";
+					z-index: 5;
+					position: absolute;
+					bottom: -0.1rem;
+					left: 50%;
+					transform: translateX(-50%);
+					height: 3px;
+					width: 3rem;
+					background-color: $primary-orange;
+				}
+			}
+		}
+		&.bg-white {
+			.navbar-brand {
+				color: $primary-green;
+				font-size: 1.5rem;
+				font-weight: bolder;
+			}
+		}
+	}
+	min-height: 100vh;
+	background-image: url(http://localhost/deligo/assets/img/header.png);
+	background-position: center;
+	background-size: cover;
+	color: white;
+	.header-title {
+		font-size: 3rem;
+		line-height: 4rem;
+	}
+	.header-desc {
+		font-size: 1.5rem;
+	}
+}
+
+#about {
+	padding: 5rem 0 3rem;
+	color: $primary-green;
+	.about-mascot {
+		max-width: 400px;
+	}
+}
+
+#benefits {
+	padding: 3rem 0;
+	background-color: #65c083;
+	color: white;
+	.benefit-title {
+		margin-left: 5rem;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: white;
+			top: 50%;
+			left: -1rem;
+			transform: translateY(-50%);
+			width: 0.5rem;
+			height: 50%;
+		}
+	}
+	.benefit-icon {
+		max-width: 200px;
+	}
+	.benefit-desc {
+		font-size: 1.5rem;
+	}
+}
+
+#locations {
+	padding: 5rem 0 3rem;
+	color: $primary-green;
+	.location-title {
+		margin-left: 5rem;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: $primary-green;
+			top: 50%;
+			left: -1rem;
+			transform: translateY(-50%);
+			width: 0.5rem;
+			height: 50%;
+		}
+	}
+	.location-img {
+		max-width: 300px;
+	}
+}
+
+#partners {
+	padding: 3rem 0;
+	background-color: #65c083;
+	color: white;
+	.partner-title {
+		margin-left: 5rem;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: white;
+			top: 50%;
+			left: -1rem;
+			transform: translateY(-50%);
+			width: 0.5rem;
+			height: 50%;
+		}
+	}
+	.partner-img {
+		max-width: 200px;
+	}
+}
+
+#contacts {
+	padding: 5rem 0 0;
+	.contact-title {
+		color: black;
+		margin-left: 5rem;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: grey;
+			top: 50%;
+			left: -1rem;
+			transform: translateY(-50%);
+			width: 0.5rem;
+			height: 50%;
+		}
+	}
+	.contact-content {
+		padding: 3rem 0;
+		background-color: #65c083;
+		color: white;
+	}
+}
+
+#registration {
+	padding: 3rem 0 0;
+	.registration-title {
+		color: black;
+		margin-left: 5rem;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: grey;
+			top: 50%;
+			left: -1rem;
+			transform: translateY(-50%);
+			width: 0.5rem;
+			height: 50%;
+		}
+	}
+	.registration-content {
+		padding: 3rem 0 0;
+		background-color: $primary-orange;
+		color: white;
+	}
+	.registration-link {
+		transition: ease-in-out 0.3s;
+		&:hover {
+			color: $primary-blue;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	* {
+		font-size: 12px;
+	}
+	#about {
+		.about-mascot {
+			max-width: 300px;
+		}
+	}
+	#locations {
+		.location-img {
+			width: 100%;
+		}
+	}
+	#partners {
+		.partner-img {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	#benefits {
+		.benefit-title {
+			text-align: center;
+			margin-left: 0;
+			position: relative;
+			&::after {
+				display: none;
+			}
+		}
+		.benefit-desc {
+			font-size: 1.25rem;
+		}
+	}
+	#locations {
+		.location-title {
+			text-align: center;
+			margin-left: 0;
+			position: relative;
+			&::after {
+				display: none;
+			}
+		}
+	}
+	#partners {
+		.partner-title {
+			text-align: center;
+			margin-left: 0;
+			position: relative;
+			&::after {
+				display: none;
+			}
+		}
+	}
+	#contacts {
+		.contact-title {
+			text-align: center;
+			margin-left: 0;
+			position: relative;
+			&::after {
+				display: none;
+			}
+		}
+	}
+	#registration {
+		.registration-title {
+			text-align: center;
+			margin-left: 0;
+			position: relative;
+			&::after {
+				display: none;
+			}
+		}
+		.registration-content {
+			padding: 0;
+			background-color: $primary-orange;
+			color: white;
+		}
+	}
+}

@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  border: transparent;
+}
+
+.v-height-80 {
+  min-height: 90vh;
+}
+
+.button-white {
+  background-color: white;
+  font-size: 1.25rem;
+  color: #65c083;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.button-white:hover {
+  color: white;
+  background-color: #f2865d;
+}
+
+.button-blue {
+  background-color: #23b7a4;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.button-blue:hover {
+  color: white;
+  background-color: #f2865d;
+}
+
+.form {
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.form label {
+  color: grey;
+  text-transform: uppercase;
+}
+
+.form .form-control {
+  background-color: rgba(243, 243, 243, 0.308);
+}
+
+header {
+  min-height: 100vh;
+  background-image: url(http://localhost/deligo/assets/img/header.png);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+header .navbar {
+  color: #65c083;
+}
+
+header .navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+header .navbar .nav-link {
+  color: inherit;
+  font-size: 1.25rem;
+  margin: auto 1rem;
+}
+
+header .navbar .nav-link.active {
+  position: relative;
+}
+
+header .navbar .nav-link.active::after {
+  content: "";
+  z-index: 5;
+  position: absolute;
+  bottom: -0.1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 3px;
+  width: 3rem;
+  background-color: #f2865d;
+}
+
+header .navbar.bg-white .navbar-brand {
+  color: #65c083;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+header .header-title {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+header .header-desc {
+  font-size: 1.5rem;
+}
+
+#about {
+  padding: 5rem 0 3rem;
+  color: #65c083;
+}
+
+#about .about-mascot {
+  max-width: 400px;
+}
+
+#benefits {
+  padding: 3rem 0;
+  background-color: #65c083;
+  color: white;
+}
+
+#benefits .benefit-title {
+  margin-left: 5rem;
+  position: relative;
+}
+
+#benefits .benefit-title::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: -1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.5rem;
+  height: 50%;
+}
+
+#benefits .benefit-icon {
+  max-width: 200px;
+}
+
+#benefits .benefit-desc {
+  font-size: 1.5rem;
+}
+
+#locations {
+  padding: 5rem 0 3rem;
+  color: #65c083;
+}
+
+#locations .location-title {
+  margin-left: 5rem;
+  position: relative;
+}
+
+#locations .location-title::after {
+  content: "";
+  position: absolute;
+  background-color: #65c083;
+  top: 50%;
+  left: -1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.5rem;
+  height: 50%;
+}
+
+#locations .location-img {
+  max-width: 300px;
+}
+
+#partners {
+  padding: 3rem 0;
+  background-color: #65c083;
+  color: white;
+}
+
+#partners .partner-title {
+  margin-left: 5rem;
+  position: relative;
+}
+
+#partners .partner-title::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: -1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.5rem;
+  height: 50%;
+}
+
+#partners .partner-img {
+  max-width: 200px;
+}
+
+#contacts {
+  padding: 5rem 0 0;
+}
+
+#contacts .contact-title {
+  color: black;
+  margin-left: 5rem;
+  position: relative;
+}
+
+#contacts .contact-title::after {
+  content: "";
+  position: absolute;
+  background-color: grey;
+  top: 50%;
+  left: -1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.5rem;
+  height: 50%;
+}
+
+#contacts .contact-content {
+  padding: 3rem 0;
+  background-color: #65c083;
+  color: white;
+}
+
+#registration {
+  padding: 3rem 0 0;
+}
+
+#registration .registration-title {
+  color: black;
+  margin-left: 5rem;
+  position: relative;
+}
+
+#registration .registration-title::after {
+  content: "";
+  position: absolute;
+  background-color: grey;
+  top: 50%;
+  left: -1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.5rem;
+  height: 50%;
+}
+
+#registration .registration-content {
+  padding: 3rem 0 0;
+  background-color: #f2865d;
+  color: white;
+}
+
+#registration .registration-link {
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+#registration .registration-link:hover {
+  color: #23b7a4;
+}
+
+@media screen and (max-width: 992px) {
+  * {
+    font-size: 12px;
+  }
+  #about .about-mascot {
+    max-width: 300px;
+  }
+  #locations .location-img {
+    width: 100%;
+  }
+  #partners .partner-img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #benefits .benefit-title {
+    text-align: center;
+    margin-left: 0;
+    position: relative;
+  }
+  #benefits .benefit-title::after {
+    display: none;
+  }
+  #benefits .benefit-desc {
+    font-size: 1.25rem;
+  }
+  #locations .location-title {
+    text-align: center;
+    margin-left: 0;
+    position: relative;
+  }
+  #locations .location-title::after {
+    display: none;
+  }
+  #partners .partner-title {
+    text-align: center;
+    margin-left: 0;
+    position: relative;
+  }
+  #partners .partner-title::after {
+    display: none;
+  }
+  #contacts .contact-title {
+    text-align: center;
+    margin-left: 0;
+    position: relative;
+  }
+  #contacts .contact-title::after {
+    display: none;
+  }
+  #registration .registration-title {
+    text-align: center;
+    margin-left: 0;
+    position: relative;
+  }
+  #registration .registration-title::after {
+    display: none;
+  }
+  #registration .registration-content {
+    padding: 0;
+    background-color: #f2865d;
+    color: white;
+  }
+}
+/*# sourceMappingURL=main.css.map */
