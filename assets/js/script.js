@@ -1,3 +1,59 @@
+const flashdata = $('#flash-data').data('flashdata');
+
+if (flashdata) {
+  if (flashdata == 'Access Denied') {
+    Swal.fire({
+      icon: 'error',
+      title: 'Akses Ditolak!',
+      text: 'Email dan password salah!',
+      confirmButtonColor: '#f2865d',
+    })
+  }
+  if (flashdata == 'Submitted') {
+    Swal.fire({
+      icon: 'success',
+      title: 'Pendaftaran Berhasil!',
+      text: 'Terima kasih telah bersedia mendaftar. Tunggu info selanjutnya!',
+      confirmButtonColor: '#65c083',
+    })
+  }
+  if (flashdata == 'Asked') {
+    Swal.fire({
+      icon: 'success',
+      title: 'Berhasil Dikirim!',
+      text: 'Pertanyaan anda akan segera kami respon secepatnya. Terima kasih!',
+      confirmButtonColor: '#65c083',
+    })
+  }
+  if (flashdata == 'Deleted') {
+    Swal.fire({
+      icon: 'success',
+      title: 'Berhasil Dihapus!',
+      text: 'Data telah berhasil dihapus dari database.',
+      confirmButtonColor: '#65c083',
+    })
+  }
+}
+
+$('.deleteButton').on('click', function (e) {
+  e.preventDefault();
+  const url = $(this).attr('href');
+  Swal.fire({
+    title: 'Data ingin dihapus?',
+    text: "Data terhapus tidak bisa dikembalikan lagi!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#65c083',
+    cancelButtonColor: '#f2865d',
+    confirmButtonText: 'Hapus!',
+    cancelButtonText: 'Batal!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = url;
+    }
+  })
+})
+
 var scrollSpy = new bootstrap.ScrollSpy(document.body, {
   target: '#navbar'
 })
@@ -20,7 +76,8 @@ $(document).ready(function () {
     margin: 70,
     loop: true,
     nav: true,
-    autoWidth: true,
+    // autoWidth: true,
+    // autoHeight: true,
     items: 7,
     autoplay: true,
     autoplayTimeout: 3000,

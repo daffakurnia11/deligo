@@ -10,6 +10,16 @@ $primary-blue: #23b7a4;
 	scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+	width: 0.3rem;
+	&-thumb {
+		background-color: $primary-orange;
+	}
+	&-track {
+		background-color: $primary-green;
+	}
+}
+
 body {
 	position: relative;
 }
@@ -78,7 +88,8 @@ header {
 			color: inherit;
 			font-size: 1.25rem;
 			margin: auto 1rem;
-			&.active {
+			&.active,
+			&:hover {
 				position: relative;
 				&::after {
 					content: "";
@@ -190,7 +201,8 @@ header {
 		}
 	}
 	.partner-img {
-		max-width: 200px;
+		width: auto;
+		height: 100px;
 	}
 }
 

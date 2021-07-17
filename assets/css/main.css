@@ -7,6 +7,18 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f2865d;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #65c083;
+}
+
 body {
   position: relative;
 }
@@ -95,11 +107,11 @@ header .navbar .nav-link {
   margin: auto 1rem;
 }
 
-header .navbar .nav-link.active {
+header .navbar .nav-link.active, header .navbar .nav-link:hover {
   position: relative;
 }
 
-header .navbar .nav-link.active::after {
+header .navbar .nav-link.active::after, header .navbar .nav-link:hover::after {
   content: "";
   z-index: 5;
   position: absolute;
@@ -217,7 +229,8 @@ header .header-desc {
 }
 
 #partners .partner-img {
-  max-width: 200px;
+  width: auto;
+  height: 100px;
 }
 
 #contacts {

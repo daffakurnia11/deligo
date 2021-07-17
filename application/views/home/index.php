@@ -22,6 +22,9 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar">
+  <div id="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>">
+    <?= $this->session->unset_userdata('flash'); ?>
+  </div>
   <!-- Header -->
   <header id="header">
     <nav id="navbar" class="navbar navbar-expand-lg ">
@@ -37,7 +40,7 @@
             <a class="nav-link" href="#contacts">Hubungi Kami</a>
           </div>
         </div>
-        <a class="navbar-brand" href="#">Deligo</a>
+        <a class="navbar-brand" href="<?= base_url(''); ?>">Deligo</a>
       </div>
     </nav>
     <div class="d-flex justify-content-center flex-column v-height-80">
@@ -128,37 +131,24 @@
   <!-- Partners -->
   <section id="partners">
     <div class="container">
-      <h2 class="text-uppercase mb-5 fw-bolder partner-title" data-aos="fade-right" data-aos-duration="1000">Keuntungan Mitra Deligo</h2>
-      <!-- <div class="owl-carousel">
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-      </div> -->
-      <div class="owl-carousel owl-theme owl-loaded" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-        <div class="owl-stage-outer">
-          <div class="owl-stage">
-            <div class="owl-item text-center">
-              <img src="<?= base_url('assets/img/partner-placeholder.png'); ?>" class="partner-img my-3" alt="">
-            </div>
-            <div class="owl-item text-center">
-              <img src="<?= base_url('assets/img/partner-placeholder.png'); ?>" class="partner-img my-3" alt="">
-            </div>
-            <div class="owl-item text-center">
-              <img src="<?= base_url('assets/img/partner-placeholder.png'); ?>" class="partner-img my-3" alt="">
-            </div>
-            <div class="owl-item text-center">
-              <img src="<?= base_url('assets/img/partner-placeholder.png'); ?>" class="partner-img my-3" alt="">
-            </div>
-            <div class="owl-item text-center">
-              <img src="<?= base_url('assets/img/partner-placeholder.png'); ?>" class="partner-img my-3" alt="">
+      <h2 class="text-uppercase mb-5 fw-bolder partner-title" data-aos="fade-right" data-aos-duration="1000">Brand Partners</h2>
+      <?php if ($brands) : ?>
+        <div class="owl-carousel owl-theme owl-loaded" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+          <div class="owl-stage-outer">
+            <div class="owl-stage">
+              <?php foreach ($brands as $brand) : ?>
+                <div class="owl-item">
+                  <div class="text-center">
+                    <img src="<?= base_url('assets/img/brands/' . $brand['img']); ?>" class="partner-img my-3 mx-auto d-inline-block" alt="<?= $brand['brand']; ?>">
+                  </div>
+                </div>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>
-      </div>
+      <?php else : ?>
+        <p class="h4 text-center">Belum terdapat Brand Partners</p>
+      <?php endif; ?>
     </div>
   </section>
   <!-- End of Partners -->
@@ -178,27 +168,27 @@
             <p>Apabila ada pertanyaan, bisa menghubungi kontak kami dengan mengisi form terlebih dahulu.</p>
           </div>
           <div class="col-lg-6">
-            <form action="" method="post" class="form" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="0">
+            <form action="home/ask_question" method="post" class="form" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="0">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="name@example.com">
+                    <input required type="text" class="form-control" id="name" name="name" placeholder="name@example.com">
                     <label for="name">Nama</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="contact" name="contact" placeholder="name@example.com">
+                    <input required type="text" class="form-control" id="contact" name="contact" placeholder="name@example.com">
                     <label for="contact">Kontak</label>
                   </div>
                 </div>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="email" name="email" placeholder="name@example.com">
+                <input required type="text" class="form-control" id="email" name="email" placeholder="name@example.com">
                 <label for="email">Email</label>
               </div>
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="message" name="message" style="height: 100px"></textarea>
+                <textarea required class="form-control" placeholder="Leave a comment here" id="message" name="message" style="height: 100px"></textarea>
                 <label for="message">Pertanyaan</label>
               </div>
               <button type="submit" class="button-blue mt-3">Kirim Pesan</button>
@@ -222,68 +212,69 @@
             <h3 class="h2 text-uppercase fw-bold text-center text-lg-start">Mari Kembangkan bisnis kuliner online anda bersama kami !</h3>
             <h3 class="h2 fw-bold mt-5 text-center text-lg-start">Bergabung Bersama Kami!</h3>
             <div class="support-contact mt-5">
-              <a class="d-block my-3 registration-link" href="mailto:support@deligokitchens.com">
-                <div class="d-flex align-items-center">
-                  <i class="fas fa-fw fa-2x fa-envelope"></i>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-fw fa-2x fa-envelope"></i>
+                <a class="my-3 registration-link" href="mailto:support@deligokitchens.com" target="_blank">
                   <span class="ms-2">support@deligokitchens.com</span>
-                </div>
-              </a>
-              <a class="d-block my-3 registration-link" href="">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-fw fa-2x fa-instagram"></i>
+                </a>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fab fa-fw fa-2x fa-instagram"></i>
+                <a class="my-3 registration-link" href="https://www.instagram.com/deligokitchens/" target="_blank">
                   <span class="ms-2">deligokitchens</span>
-                </div>
-              </a>
-              <a class="d-block my-3 registration-link" href="">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-fw fa-2x fa-whatsapp"></i>
+                </a>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fab fa-fw fa-2x fa-whatsapp"></i>
+                <a class="my-3 registration-link" href="https://wa.me/6285813550952" target="_blank">
                   <span class="ms-2">0858 1355 0952</span>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <form action="" method="post" class="form" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="0">
+            <form action="<?= base_url('home/submit'); ?>" method="post" class="form" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="0">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="name@example.com">
+                    <input required type="text" class="form-control <?= form_error('name') ? 'is-invalid' : ''; ?>" id="name" name="name" placeholder="name@example.com" value="<?= set_value('name'); ?>">
                     <label for="name">Nama</label>
                   </div>
+                  <?= form_error('name', '<div class="invalid-feedback">', '</div>'); ?>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="contact" name="contact" placeholder="name@example.com">
+                    <input required type="text" class="form-control" id="contact" name="contact" placeholder="name@example.com" value="<?= set_value('kontak'); ?>">
                     <label for="contact">Kontak</label>
                   </div>
                 </div>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="email" name="email" placeholder="name@example.com">
+                <input required type="text" class="form-control" id="email" name="email" placeholder="name@example.com" value="<?= set_value('email'); ?>">
                 <label for="email">Email</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="brand" name="brand" placeholder="name@example.com">
+                <input required type="text" class="form-control" id="brand" name="brand" placeholder="name@example.com" value="<?= set_value('brand'); ?>">
                 <label for="brand">Nama Brand</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="instagram" name="instagram" placeholder="name@example.com">
+                <input required type="text" class="form-control" id="instagram" name="instagram" placeholder="name@example.com" value="<?= set_value('instagram'); ?>">
                 <label for="instagram">Akun Instagram</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="location" name="location" placeholder="name@example.com">
+                <input required type="text" class="form-control" id="location" name="location" placeholder="name@example.com" value="<?= set_value('location'); ?>">
                 <label for="location">Lokasi</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="registered" name="registered" placeholder="name@example.com">
+                <input required type="text" class="form-control" id="registered" name="registered" placeholder="name@example.com" value="<?= set_value('registered'); ?>">
                 <label for="registered">Brand Anda terdaftar di Online Delivery</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="sales" name="sales" placeholder="name@example.com">
+                <input required type="text" class="form-control" id="sales" name="sales" placeholder="name@example.com" value="<?= set_value('sales'); ?>">
                 <label for="sales">Berapa banyak penjualan anda per hari?</label>
               </div>
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="message" name="message" style="height: 100px"></textarea>
+                <textarea required class="form-control" placeholder="Leave a comment here" id="message" name="message" style="height: 100px"><?= set_value('message'); ?></textarea>
                 <label for="message">Pesan</label>
               </div>
               <button type="submit" class="button-blue mt-3 px-5">Kirim</button>
@@ -301,10 +292,10 @@
             <a href="" class="registration-link mx-3">
               <i class="fab fa-fw fa-lg fa-facebook-f"></i>
             </a>
-            <a href="" class="registration-link mx-3">
+            <a href="https://www.instagram.com/deligokitchens/" target="_blank" class="registration-link mx-3">
               <i class="fab fa-fw fa-lg fa-instagram"></i>
             </a>
-            <a href="" class="registration-link mx-3">
+            <a href="https://wa.me/6285813550952" target="_blank" class="registration-link mx-3">
               <i class="fab fa-fw fa-lg fa-whatsapp"></i>
             </a>
           </div>
@@ -317,6 +308,7 @@
   <!-- Javascript -->
   <script src="<?= base_url('assets/dist/'); ?>bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="<?= base_url('assets/dist/'); ?>jquery/dist/jquery.min.js"></script>
+  <script src="<?= base_url('assets/dist/'); ?>sweetalert2/dist/sweetalert2.all.min.js"></script>
   <script src="<?= base_url('assets/dist/'); ?>owlcarousel/dist/owl.carousel.min.js"></script>
   <script src="<?= base_url('assets/dist/'); ?>aos/dist/aos.js"></script>
   <script src="<?= base_url('assets/js/'); ?>script.js"></script>
