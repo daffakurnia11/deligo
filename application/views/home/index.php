@@ -5,6 +5,14 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="<?= base_url(''); ?>">
+  <meta name="canonical" href="<?= base_url(''); ?>" />
+  <meta name="description" content="Deligo adalah penyedia layanan ruang dapur bersama atau Cloud Kitchen yang membantu ekspansi bisnis kuliner secara cepat dengan biaya yang rendah" />
+  <meta name="author" content="Deligo Cloud Kitchens" />
+  <meta name="keywords" content="Deligo,Deligo Kitchen, Deligo Kitchens, Deligo Cloud Kitchens, Cloud Kitchen, Cloud Kitchens, Cloud Kitchen Surabaya, Cloud Kitchens Surabaya, Surabaya" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#65c083" />
+  <link rel="icon" href="<?= base_url('assets/img/logo.png'); ?>">
 
   <!-- Bootstrap CSS -->
   <link href="<?= base_url('assets/dist/'); ?>bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,20 +35,25 @@
   </div>
   <!-- Header -->
   <header id="header">
-    <nav id="navbar" class="navbar navbar-expand-lg ">
+    <nav id="navbar" class="navbar navbar-expand-lg">
       <div class="container">
+        <a class="navbar-brand d-block d-lg-none" href="<?= base_url(''); ?>">
+          <img src="<?= base_url('assets/img/logo-green.png'); ?>" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <i class="fas fa-fw fa-lg fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
+          <div class="navbar-nav text-center">
             <a class="nav-link active" href="#header">Beranda</a>
             <a class="nav-link" href="#about">Tentang Kami</a>
             <a class="nav-link" href="#locations">Lokasi</a>
             <a class="nav-link" href="#contacts">Hubungi Kami</a>
           </div>
         </div>
-        <a class="navbar-brand" href="<?= base_url(''); ?>">Deligo</a>
+        <a class="navbar-brand d-none d-lg-block" href="<?= base_url(''); ?>">
+          <img src="<?= base_url('assets/img/logo-white.png'); ?>" id="imageLogo" alt="">
+        </a>
       </div>
     </nav>
     <div class="d-flex justify-content-center flex-column v-height-80">
@@ -63,10 +76,10 @@
   <section id="about">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1000">
           <img src="<?= base_url('assets/img/mascot.png'); ?>" class="about-mascot" alt="">
         </div>
-        <div class="col-md-8 py-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+        <div class="col-md-8 py-3" data-aos="fade-up" data-aos-offset="0" data-aos-delay="500" data-aos-duration="1000">
           <h2 class="text-center px-3">Deligo adalah penyedia layanan ruang dapur bersama atau Cloud Kitchen yang membantu ekspansi bisnis kuliner secara cepat dengan biaya yang rendah</h2>
         </div>
       </div>
@@ -105,23 +118,53 @@
     <div class="container">
       <h2 class="text-uppercase mb-5 fw-bolder location-title" data-aos="fade-right" data-aos-duration="1000">Lokasi Kitchen Kami</h2>
       <div class="row">
-        <div class="col-6 col-md-4 my-3 text-center" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="250" data-aos-duration="1000">
-          <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+        <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="250" data-aos-duration="1000">
+          <div class="locations-image text-center mx-auto">
+            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+            <div class="location-desc">
+              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-4 my-3 text-center" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="500" data-aos-duration="1000">
-          <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+        <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="500" data-aos-duration="1000">
+          <div class="locations-image text-center mx-auto">
+            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+            <div class="location-desc">
+              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-4 my-3 text-center" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="750" data-aos-duration="1000">
-          <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+        <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="750" data-aos-duration="1000">
+          <div class="locations-image text-center mx-auto">
+            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+            <div class="location-desc">
+              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-4 my-3 text-center" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1000" data-aos-duration="1000">
-          <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+        <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1000" data-aos-duration="1000">
+          <div class="locations-image text-center mx-auto">
+            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+            <div class="location-desc">
+              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-4 my-3 text-center" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1250" data-aos-duration="1000">
-          <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+        <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1250" data-aos-duration="1000">
+          <div class="locations-image text-center mx-auto">
+            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+            <div class="location-desc">
+              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-4 my-3 text-center" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1500" data-aos-duration="1000">
-          <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+        <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1500" data-aos-duration="1000">
+          <div class="locations-image text-center mx-auto">
+            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
+            <div class="location-desc">
+              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

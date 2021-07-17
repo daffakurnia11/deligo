@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Gilroy;
+  src: url(../font/Gilroy-Regular.woff);
+  font-weight: 500;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -95,10 +101,8 @@ header .navbar {
   color: #65c083;
 }
 
-header .navbar-brand {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bolder;
+header .navbar-brand img {
+  max-height: 40px;
 }
 
 header .navbar .nav-link {
@@ -130,17 +134,28 @@ header .navbar.bg-white .navbar-brand {
   font-weight: bolder;
 }
 
+header .navbar .fas,
+header .navbar .navbar-toggler:focus {
+  color: #65c083;
+  outline: none;
+}
+
 header .header-title {
+  font-family: "Gilroy";
   font-size: 3rem;
+  font-weight: normal;
   line-height: 4rem;
 }
 
 header .header-desc {
+  font-family: "Gilroy";
+  font-weight: normal;
   font-size: 1.5rem;
 }
 
 #about {
   padding: 5rem 0 3rem;
+  font-weight: 700;
   color: #65c083;
 }
 
@@ -201,8 +216,41 @@ header .header-desc {
   height: 50%;
 }
 
-#locations .location-img {
+#locations .locations-image {
+  position: relative;
   max-width: 300px;
+}
+
+#locations .locations-image img {
+  width: 100%;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+#locations .locations-image .location-desc {
+  font-weight: bold;
+  opacity: 0;
+  color: #65c083;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+#locations .locations-image:hover img {
+  -webkit-filter: brightness(0.3);
+          filter: brightness(0.3);
+}
+
+#locations .locations-image:hover .location-desc {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  opacity: 1;
 }
 
 #partners {
@@ -302,6 +350,29 @@ header .header-desc {
   * {
     font-size: 12px;
   }
+  header .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: white;
+  }
+  header .navbar-brand {
+    color: #65c083;
+    font-size: 1.75rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+  }
+  header .navbar-nav {
+    background-color: white;
+  }
+  header .navbar.bg-white .navbar-brand {
+    color: #65c083;
+    font-size: 1.75rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+  }
   #about .about-mascot {
     max-width: 300px;
   }
@@ -309,7 +380,8 @@ header .header-desc {
     width: 100%;
   }
   #partners .partner-img {
-    width: 100%;
+    width: auto;
+    height: 100px;
   }
 }
 

@@ -2,6 +2,12 @@ $primary-green: #65c083;
 $primary-orange: #f2865d;
 $primary-blue: #23b7a4;
 
+@font-face {
+	font-family: Gilroy;
+	src: url(../font/Gilroy-Regular.woff);
+	font-weight: 500;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -80,9 +86,9 @@ header {
 	.navbar {
 		color: $primary-green;
 		&-brand {
-			color: white;
-			font-size: 1.5rem;
-			font-weight: bolder;
+			img {
+				max-height: 40px;
+			}
 		}
 		.nav-link {
 			color: inherit;
@@ -111,6 +117,11 @@ header {
 				font-weight: bolder;
 			}
 		}
+		.fas,
+		.navbar-toggler:focus {
+			color: $primary-green;
+			outline: none;
+		}
 	}
 	min-height: 100vh;
 	background-image: url(http://localhost/deligo/assets/img/header.png);
@@ -118,16 +129,21 @@ header {
 	background-size: cover;
 	color: white;
 	.header-title {
+		font-family: "Gilroy";
 		font-size: 3rem;
+		font-weight: normal;
 		line-height: 4rem;
 	}
 	.header-desc {
+		font-family: "Gilroy";
+		font-weight: normal;
 		font-size: 1.5rem;
 	}
 }
 
 #about {
 	padding: 5rem 0 3rem;
+	font-weight: 700;
 	color: $primary-green;
 	.about-mascot {
 		max-width: 400px;
@@ -177,8 +193,34 @@ header {
 			height: 50%;
 		}
 	}
-	.location-img {
+	.locations-image {
+		position: relative;
 		max-width: 300px;
+		img {
+			width: 100%;
+			transition: ease 0.5s;
+			filter: brightness(1);
+		}
+		.location-desc {
+			font-weight: bold;
+			opacity: 0;
+			color: $primary-green;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 1.5rem;
+			transition: ease 0.5s;
+		}
+		&:hover {
+			img {
+				filter: brightness(0.3);
+			}
+			.location-desc {
+				top: 50%;
+				transform: translate(0, -50%);
+				opacity: 1;
+			}
+		}
 	}
 }
 
@@ -264,6 +306,33 @@ header {
 	* {
 		font-size: 12px;
 	}
+	header {
+		.navbar {
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			z-index: 1030;
+			background-color: white;
+			&-brand {
+				color: $primary-green;
+				font-size: 1.75rem;
+				font-weight: bolder;
+				margin-left: 1rem;
+			}
+			&-nav {
+				background-color: white;
+			}
+			&.bg-white {
+				.navbar-brand {
+					color: $primary-green;
+					font-size: 1.75rem;
+					font-weight: bolder;
+					margin-left: 1rem;
+				}
+			}
+		}
+	}
 	#about {
 		.about-mascot {
 			max-width: 300px;
@@ -276,7 +345,8 @@ header {
 	}
 	#partners {
 		.partner-img {
-			width: 100%;
+			width: auto;
+			height: 100px;
 		}
 	}
 }

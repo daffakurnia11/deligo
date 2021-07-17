@@ -6,8 +6,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <link rel="canonical" href="<?= base_url(''); ?>">
+  <meta name="canonical" href="<?= base_url(''); ?>" />
+  <meta name="description" content="Deligo adalah penyedia layanan ruang dapur bersama atau Cloud Kitchen yang membantu ekspansi bisnis kuliner secara cepat dengan biaya yang rendah" />
+  <meta name="author" content="Deligo Cloud Kitchens" />
+  <!-- <meta name="keywords" content="Daffa Kurnia Fatah,Daffa,Kurnia,Fatah,daffakurnia,daffakurnia11,daffakurniaf11,Web Developer,Front-End,Full-stack,Esentika,Archproject,Breakpoint" /> -->
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#65c083" />
+  <link rel="icon" href="<?= base_url('assets/img/logo.png'); ?>">
 
   <title>Deligo Kitchen | <?= $title; ?></title>
 

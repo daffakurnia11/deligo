@@ -1,4 +1,5 @@
 const flashdata = $('#flash-data').data('flashdata');
+const url = 'http://localhost/deligo/';
 
 if (flashdata) {
   if (flashdata == 'Access Denied') {
@@ -64,11 +65,14 @@ AOS.init({
 $(window).scroll(function () {
   var scroll = $(window).scrollTop();
   var height = $(window).height() - 100;
+  let white = false;
 
   if (scroll >= height) {
     $(".navbar").addClass("fixed-top").addClass('bg-white');
+    $("#imageLogo").attr('src', url + 'assets/img/logo-green.png');
   } else {
     $(".navbar").removeClass("fixed-top").removeClass('bg-white');
+    $("#imageLogo").attr('src', url + 'assets/img/logo-white.png');
   }
 });
 $(document).ready(function () {
@@ -78,7 +82,7 @@ $(document).ready(function () {
     nav: true,
     // autoWidth: true,
     // autoHeight: true,
-    items: 7,
+    items: 2,
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,

@@ -77,7 +77,7 @@ class Dashboard extends CI_Controller
     $id = $this->input->get('id');
     $data_query = $this->input->get('data');
 
-    // $this->db->delete($data_query, ['id' => $id]);
+    $this->db->delete($data_query, ['id' => $id]);
     $this->session->set_flashdata('flash', 'Deleted');
     redirect('pendaftar');
   }
