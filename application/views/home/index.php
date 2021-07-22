@@ -1,3 +1,4 @@
+<!-- Whatsapp Fixed -->
 <!doctype html>
 <html lang="en">
 
@@ -45,10 +46,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav text-center">
-            <a class="nav-link active" href="#header">Beranda</a>
-            <a class="nav-link" href="#about">Tentang Kami</a>
-            <a class="nav-link" href="#locations">Lokasi</a>
-            <a class="nav-link" href="#contacts">Hubungi Kami</a>
+            <a class="nav-link fw-bold active" href="#header">Beranda</a>
+            <a class="nav-link fw-bold" href="#about">Tentang Kami</a>
+            <a class="nav-link fw-bold" href="#locations">Lokasi</a>
+            <a class="nav-link fw-bold" href="#contacts">Hubungi Kami</a>
+            <a class="nav-link fw-bold" href="#registration">Daftar</a>
           </div>
         </div>
         <a class="navbar-brand d-none d-lg-block" href="<?= base_url(''); ?>">
@@ -60,10 +62,10 @@
       <div class="container px-4" data-aos="fade-up" data-aos-duration="1000">
         <div class="row">
           <div class="col-lg-6">
-            <h1 class="header-title text-uppercase text-center text-lg-start">Kembangkan Bisnis Kuliner Online Anda Bersama DELIGO!</h1>
-            <p class="header-desc mt-4 mb-5 text-center text-lg-start">Your one stop solution cloud kitchen</p>
+            <h1 class="header-title fw-bolder text-uppercase text-center text-lg-start">Kembangkan Bisnis Kuliner Online Anda Bersama DELIGO!</h1>
+            <p class="header-desc fw-bold mt-4 mb-5 text-center text-lg-start">Your one stop solution cloud kitchen</p>
             <div class="text-center text-lg-start">
-              <a href="" class="button-white">Daftar</a>
+              <a href="#registration" class="button-white fw-bolder">Daftar</a>
             </div>
           </div>
         </div>
@@ -80,7 +82,7 @@
           <img src="<?= base_url('assets/img/mascot.png'); ?>" class="about-mascot" alt="">
         </div>
         <div class="col-md-8 py-3" data-aos="fade-up" data-aos-offset="0" data-aos-delay="500" data-aos-duration="1000">
-          <h2 class="text-center px-3">Deligo adalah penyedia layanan ruang dapur bersama atau Cloud Kitchen yang membantu ekspansi bisnis kuliner secara cepat dengan biaya yang rendah</h2>
+          <h2 class="text-center fw-bolder px-3">Deligo adalah penyedia layanan ruang dapur bersama atau Cloud Kitchen yang membantu ekspansi bisnis kuliner secara cepat dengan biaya yang rendah</h2>
         </div>
       </div>
     </div>
@@ -102,7 +104,7 @@
         </div>
         <div class="col-6 col-md-3 mt-3 text-center" data-aos="fade-up" data-aos-offset="0" data-aos-delay="1500" data-aos-duration="1000">
           <img src="<?= base_url('assets/img/icon3.svg'); ?>" class="benefit-icon" alt="">
-          <p class="benefit-desc fw-bold my-3">Dukung pemasaran digital bagi Mitra</p>
+          <p class="benefit-desc fw-bold my-3">Dukungan pemasaran digital bagi Mitra</p>
         </div>
         <div class="col-6 col-md-3 mt-3 text-center" data-aos="fade-up" data-aos-offset="0" data-aos-delay="2000" data-aos-duration="1000">
           <img src="<?= base_url('assets/img/icon4.svg'); ?>" class="benefit-icon" alt="">
@@ -188,6 +190,12 @@
               <?php endforeach; ?>
             </div>
           </div>
+          <div class="owl-controls">
+            <div class="owl-nav">
+              <div class="owl-prev"></div>
+              <div class="owl-next"></div>
+            </div>
+          </div>
         </div>
       <?php else : ?>
         <p class="h4 text-center">Belum terdapat Brand Partners</p>
@@ -205,33 +213,33 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 text-center text-lg-start pb-4" data-aos="fade-right" data-aos-duration="1000">
-            <h3 class="h2 fw-bold">Masih Bingung ?</h3>
-            <h3 class="h2 fw-bold">Ada Pertannyaan ?</h3>
-            <h4 class="mt-4 fw-bold">Hubungi Kami !</h4>
-            <p>Apabila ada pertanyaan, bisa menghubungi kontak kami dengan mengisi form terlebih dahulu.</p>
+            <h3 class="h1 fw-bolder">Masih Bingung ?</h3>
+            <h3 class="h1 fw-bolder">Ada Pertanyaan ?</h3>
+            <h4 class="mt-4 h2 fw-bolder">Hubungi Kami !</h4>
+            <p class="fw-normal">Apabila ada pertanyaan, bisa menghubungi kontak kami dengan mengisi form terlebih dahulu.</p>
           </div>
           <div class="col-lg-6">
             <form action="home/ask_question" method="post" class="form" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="0">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input required type="text" class="form-control" id="name" name="name" placeholder="name@example.com">
+                    <input required type="text" class="form-control" id="name" name="name" placeholder="Masukkan Nama">
                     <label for="name">Nama</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input required type="text" class="form-control" id="contact" name="contact" placeholder="name@example.com">
+                    <input required type="text" class="form-control" id="contact" name="contact" placeholder="Masukkan Kontak">
                     <label for="contact">Kontak</label>
                   </div>
                 </div>
               </div>
               <div class="form-floating mb-3">
-                <input required type="text" class="form-control" id="email" name="email" placeholder="name@example.com">
+                <input required type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email">
                 <label for="email">Email</label>
               </div>
               <div class="form-floating">
-                <textarea required class="form-control" placeholder="Leave a comment here" id="message" name="message" style="height: 100px"></textarea>
+                <textarea required class="form-control" placeholder="Masukkan Pesan" id="message" name="message" style="height: 100px"></textarea>
                 <label for="message">Pertanyaan</label>
               </div>
               <button type="submit" class="button-blue mt-3">Kirim Pesan</button>
@@ -252,25 +260,25 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 py-5" data-aos="fade-right" data-aos-duration="1000" data-aos="fade-right" data-aos-duration="1000">
-            <h3 class="h2 text-uppercase fw-bold text-center text-lg-start">Mari Kembangkan bisnis kuliner online anda bersama kami !</h3>
-            <h3 class="h2 fw-bold mt-5 text-center text-lg-start">Bergabung Bersama Kami!</h3>
+            <h3 class="h2 text-uppercase fw-bolder text-center text-lg-start">Mari Kembangkan bisnis kuliner online anda bersama kami !</h3>
+            <h3 class="h2 fw-bolder mt-5 text-center text-lg-start">Bergabung Bersama Kami!</h3>
             <div class="support-contact mt-5">
               <div class="d-flex align-items-center">
                 <i class="fas fa-fw fa-2x fa-envelope"></i>
                 <a class="my-3 registration-link" href="mailto:support@deligokitchens.com" target="_blank">
-                  <span class="ms-2">support@deligokitchens.com</span>
+                  <span class="ms-2 fw-normal">support@deligokitchens.com</span>
                 </a>
               </div>
               <div class="d-flex align-items-center">
                 <i class="fab fa-fw fa-2x fa-instagram"></i>
                 <a class="my-3 registration-link" href="https://www.instagram.com/deligokitchens/" target="_blank">
-                  <span class="ms-2">deligokitchens</span>
+                  <span class="ms-2 fw-normal">deligokitchens</span>
                 </a>
               </div>
               <div class="d-flex align-items-center">
                 <i class="fab fa-fw fa-2x fa-whatsapp"></i>
                 <a class="my-3 registration-link" href="https://wa.me/6285813550952" target="_blank">
-                  <span class="ms-2">0858 1355 0952</span>
+                  <span class="ms-2 fw-normal">0858 1355 0952</span>
                 </a>
               </div>
             </div>
@@ -280,44 +288,57 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input required type="text" class="form-control <?= form_error('name') ? 'is-invalid' : ''; ?>" id="name" name="name" placeholder="name@example.com" value="<?= set_value('name'); ?>">
+                    <input required type="text" class="form-control <?= form_error('name') ? 'is-invalid' : ''; ?>" id="name" name="name" placeholder="Masukkan Nama" value="<?= set_value('name'); ?>">
                     <label for="name">Nama</label>
                   </div>
                   <?= form_error('name', '<div class="invalid-feedback">', '</div>'); ?>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input required type="text" class="form-control" id="contact" name="contact" placeholder="name@example.com" value="<?= set_value('kontak'); ?>">
+                    <input required type="text" class="form-control" id="contact" name="contact" placeholder="Masukkan Kontak" value="<?= set_value('kontak'); ?>">
                     <label for="contact">Kontak</label>
                   </div>
                 </div>
               </div>
               <div class="form-floating mb-3">
-                <input required type="text" class="form-control" id="email" name="email" placeholder="name@example.com" value="<?= set_value('email'); ?>">
+                <input required type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email" value="<?= set_value('email'); ?>">
                 <label for="email">Email</label>
               </div>
               <div class="form-floating mb-3">
-                <input required type="text" class="form-control" id="brand" name="brand" placeholder="name@example.com" value="<?= set_value('brand'); ?>">
+                <input required type="text" class="form-control" id="brand" name="brand" placeholder="Masukkan Brand" value="<?= set_value('brand'); ?>">
                 <label for="brand">Nama Brand</label>
               </div>
               <div class="form-floating mb-3">
-                <input required type="text" class="form-control" id="instagram" name="instagram" placeholder="name@example.com" value="<?= set_value('instagram'); ?>">
+                <input required type="text" class="form-control" id="instagram" name="instagram" placeholder="Masukkan Akun Instagram" value="<?= set_value('instagram'); ?>">
                 <label for="instagram">Akun Instagram</label>
               </div>
               <div class="form-floating mb-3">
-                <input required type="text" class="form-control" id="location" name="location" placeholder="name@example.com" value="<?= set_value('location'); ?>">
+                <input required type="text" class="form-control" id="location" name="location" placeholder="Masukkan Lokasi" value="<?= set_value('location'); ?>">
                 <label for="location">Lokasi</label>
               </div>
               <div class="form-floating mb-3">
-                <input required type="text" class="form-control" id="registered" name="registered" placeholder="name@example.com" value="<?= set_value('registered'); ?>">
+                <!-- Ganti Select -->
+                <select class="form-select" id="registered" name="registered" placeholder="Pilih salah satu" value="<?= set_value('registered'); ?>">
+                  <option selected>Pilih salah satu</option>
+                  <option value="Ya">Ya</option>
+                  <option value="Tidak">Tidak</option>
+                </select>
                 <label for="registered">Brand Anda terdaftar di Online Delivery</label>
               </div>
               <div class="form-floating mb-3">
-                <input required type="text" class="form-control" id="sales" name="sales" placeholder="name@example.com" value="<?= set_value('sales'); ?>">
+                <!-- Ganti Select -->
+                <select class="form-select" id="sales" name="sales" placeholder="Pilih salah satu" value="<?= set_value('sales'); ?>">
+                  <option selected>Pilih salah satu</option>
+                  <option value="<25">Dibawah 25 Porsi</option>
+                  <option value="26-50">26-50 porsi</option>
+                  <option value="51-75">51-75 porsi</option>
+                  <option value="76-100">76-100 porsi</option>
+                  <option value=">100">Diatas 100 porsi</option>
+                </select>
                 <label for="sales">Berapa banyak penjualan anda per hari?</label>
               </div>
               <div class="form-floating">
-                <textarea required class="form-control" placeholder="Leave a comment here" id="message" name="message" style="height: 100px"><?= set_value('message'); ?></textarea>
+                <textarea required class="form-control" placeholder="Masukkan Pesan" id="message" name="message" style="height: 100px"><?= set_value('message'); ?></textarea>
                 <label for="message">Pesan</label>
               </div>
               <button type="submit" class="button-blue mt-3 px-5">Kirim</button>
@@ -329,9 +350,6 @@
             &copy; Copyright 2021 by <a href="https://breakpoint.id/" class="registration-link" target="_blank">Breakpoint</a>. All rights reserved.
           </div>
           <div class="col-md-6 order-1 order-md-2 text-md-end text-center">
-            <a href="" class="registration-link mx-3">
-              <i class="fab fa-fw fa-lg fa-twitter"></i>
-            </a>
             <a href="" class="registration-link mx-3">
               <i class="fab fa-fw fa-lg fa-facebook-f"></i>
             </a>
@@ -347,6 +365,12 @@
     </div>
   </section>
   <!-- End of Registration -->
+
+  <!-- Sticky Whatsapp Button -->
+  <a href="https://wa.me/6285813550952" target="_blank" class="button-sticky whatsapp-button d-flex justify-content-center align-items-center">
+    <i class="fab fa-2x fa-whatsapp"></i>
+  </a>
+  <!-- End of Sticky Whatsapp Button -->
 
   <!-- Javascript -->
   <script src="<?= base_url('assets/dist/'); ?>bootstrap/dist/js/bootstrap.bundle.min.js"></script>

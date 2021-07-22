@@ -77,15 +77,18 @@ $(window).scroll(function () {
 });
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
+    stagePadding: 50,
     margin: 70,
     loop: true,
     nav: true,
-    // autoWidth: true,
-    // autoHeight: true,
+    autoWidth: true,
+    center: true,
+    lazyLoad: true,
     items: 2,
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
+    navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
     responsive: {
       576: {
         items: 2
