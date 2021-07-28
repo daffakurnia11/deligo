@@ -250,9 +250,10 @@ header .header-desc {
 #locations .locations-image {
   position: relative;
   max-width: 300px;
+  overflow: hidden;
 }
 
-#locations .locations-image img {
+#locations .locations-image .location-img {
   width: 100%;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
@@ -261,12 +262,15 @@ header .header-desc {
 }
 
 #locations .locations-image .location-desc {
+  width: 100%;
   font-weight: bold;
   opacity: 0;
   color: #65c083;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding: 1.5rem;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
@@ -279,8 +283,9 @@ header .header-desc {
 
 #locations .locations-image:hover .location-desc {
   top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   opacity: 1;
 }
 

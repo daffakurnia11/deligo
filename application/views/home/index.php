@@ -1,4 +1,6 @@
-<!-- Whatsapp Fixed -->
+<?php
+date_default_timezone_set("Asia/Jakarta");
+?>
 <!doctype html>
 <html lang="en">
 
@@ -25,7 +27,8 @@
   <link rel="stylesheet" href="<?= base_url('assets/dist/'); ?>owlcarousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="<?= base_url('assets/dist/'); ?>owlcarousel/dist/assets/owl.theme.default.min.css">
   <!-- CSS -->
-  <link href="<?= base_url('assets/css/'); ?>main.css" rel="stylesheet">
+  <link href="<?= base_url('assets/css/'); ?>main.css?modified=<?= date("Ymd-His"); ?>
+" rel="stylesheet">
 
   <title>Deligo Cloud Kitchen</title>
 </head>
@@ -122,49 +125,49 @@
       <div class="row">
         <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="250" data-aos-duration="1000">
           <div class="locations-image text-center mx-auto">
-            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
-            <div class="location-desc">
-              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            <img src="<?= base_url('assets/img/location-1.jpg'); ?>" class="location-img" alt="">
+            <div class="location-desc text-center">
+              <p class="m-0">Ruko Landmark Delta blok AE. Jl. Raya Panjangjiwo Permai, Tenggilis, Surabaya</p>
             </div>
           </div>
         </div>
         <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="500" data-aos-duration="1000">
           <div class="locations-image text-center mx-auto">
-            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
-            <div class="location-desc">
-              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            <img src="<?= base_url('assets/img/comingsoon.png'); ?>" class="location-img" alt="">
+            <div class="location-desc text-center">
+              <p class="m-0">Coming Soon!</p>
             </div>
           </div>
         </div>
         <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="750" data-aos-duration="1000">
           <div class="locations-image text-center mx-auto">
-            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
-            <div class="location-desc">
-              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            <img src="<?= base_url('assets/img/comingsoon.png'); ?>" class="location-img" alt="">
+            <div class="location-desc text-center">
+              <p class="m-0">Coming Soon!</p>
             </div>
           </div>
         </div>
         <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1000" data-aos-duration="1000">
           <div class="locations-image text-center mx-auto">
-            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
-            <div class="location-desc">
-              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            <img src="<?= base_url('assets/img/comingsoon.png'); ?>" class="location-img" alt="">
+            <div class="location-desc text-center">
+              <p class="m-0">Coming Soon!</p>
             </div>
           </div>
         </div>
         <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1250" data-aos-duration="1000">
           <div class="locations-image text-center mx-auto">
-            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
-            <div class="location-desc">
-              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            <img src="<?= base_url('assets/img/comingsoon.png'); ?>" class="location-img" alt="">
+            <div class="location-desc text-center">
+              <p class="m-0">Coming Soon!</p>
             </div>
           </div>
         </div>
         <div class="col-6 col-md-4 my-3" data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1500" data-aos-duration="1000">
           <div class="locations-image text-center mx-auto">
-            <img src="<?= base_url('assets/img/location-placeholder.png'); ?>" class="location-img" alt="">
-            <div class="location-desc">
-              <p class="m-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ea.</p>
+            <img src="<?= base_url('assets/img/comingsoon.png'); ?>" class="location-img" alt="">
+            <div class="location-desc text-center">
+              <p class="m-0">Coming Soon!</p>
             </div>
           </div>
         </div>
